@@ -22,7 +22,7 @@ function Sidebar() {
 
         <img className="logo" src="src/assets/blacklogo.png" alt="" />
         <span>
-          <i class="fa-solid fa-pen-to-square"></i>
+          <i className="fa-solid fa-pen-to-square"></i>
         </span>
         
       </button>
