@@ -4,8 +4,7 @@ import "./Sidebar.css";
 import { v4 as uuidv4 } from "uuid";
 import { toast } from "react-toastify";
 
-function Sidebar() {
-  const [showSideBar, setShowSideBar] = useState(false);
+function Sidebar({ isSidebarOpen, setIsSidebarOpen }) {
   const {
     allThreads,
     backnedUrl,
@@ -74,7 +73,10 @@ function Sidebar() {
     //     </div>
     //   </div>
     // </div>
-    <section className="sidebar">
+    <section className={`sidebar ${isSidebarOpen ? 'open' : ''}`}>
+      <div className="mobile-close-btn" onClick={() => setIsSidebarOpen(false)}>
+         <i className="fa-solid fa-xmark"></i>
+      </div>
       {/* new Chat Button */}
       <button onClick={initNewChat}>
         <img className="logo" src="src/assets/blacklogo.png" alt="" />

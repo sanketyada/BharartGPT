@@ -1,3 +1,4 @@
+/*
 h1 span{
 color: #212121;
 padding:2px;
@@ -123,4 +124,165 @@ background: linear-gradient(0deg,rgba(93, 155, 42, 1) 0%, rgba(252, 252, 252, 1)
 }
 .hljs{
     border-radius: 14px;
+}
+*/
+
+/* --- NEW RESPONSIVE CSS --- */
+h1 span {
+  color: #212121;
+  padding: 2px;
+  border-radius: 10px;
+  background: linear-gradient(0deg,rgba(93, 155, 42, 1) 0%, rgba(252, 252, 252, 1) 50%, rgba(217, 87, 0, 1) 100%);
+}
+
+.chats {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 7rem;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chats::-webkit-scrollbar {
+  display: none;
+}
+
+.userDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 14px 0;
+  width: 100%;
+}
+
+.userMessage {
+  background-color: #323232;
+  padding: 10px 16px;
+  border-radius: 14px 14px 2px 14px;
+  max-width: 80%;
+  width: fit-content;
+  word-break: break-word;
+}
+
+.gptDiv {
+  text-align: left;
+  font-size: 0.95rem;
+  margin: 14px 0;
+  width: 100%;
+}
+
+.gptMessage {
+  line-height: 1.7;
+  font-size: 15px;
+  word-break: break-word;
+}
+
+.gptMessage p {
+  margin: 10px 0;
+}
+
+.gptMessage h1,
+.gptMessage h2,
+.gptMessage h3 {
+  margin: 18px 0 10px;
+  line-height: 1.3;
+}
+
+.gptMessage pre {
+  padding: 14px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 12px 0;
+  max-width: 100%;
+}
+
+.gptMessage code {
+  padding: 2px 5px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  word-wrap: break-word;
+}
+
+.gptMessage pre code {
+  padding: 0;
+  background: transparent;
+  white-space: pre-wrap; /* allow wrapping in pre */
+  word-wrap: break-word;
+}
+
+.gptMessage ul,
+.gptMessage ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.gptMessage li {
+  margin: 6px 0;
+}
+
+.gptMessage blockquote {
+  border-left: 4px solid #555;
+  padding-left: 12px;
+  margin: 12px 0;
+  opacity: 0.9;
+}
+
+.gptMessage a {
+  color: #7ab7ff;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.gptMessage a:hover {
+  text-decoration: underline;
+}
+
+.gptMessage table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+  display: block;
+  overflow-x: auto;
+}
+
+.gptMessage th,
+.gptMessage td {
+  border: 1px solid #444;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.gptMessage hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 20px 0;
+}
+
+.hljs {
+  border-radius: 14px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .chats {
+    padding: 1rem 0.5rem 6rem;
+  }
+  .userMessage {
+    max-width: 90%;
+    font-size: 14px;
+  }
+  .gptMessage {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chats {
+    padding: 0.5rem 0.5rem 5rem;
+  }
+  .userMessage {
+    max-width: 95%;
+    padding: 8px 12px;
+  }
 }

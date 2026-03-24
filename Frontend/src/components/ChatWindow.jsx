@@ -10,7 +10,7 @@ import rehypeHighlight from "https://esm.sh/rehype-highlight@6";
 
 import Typewriter from "typewriter-effect";
 
-function ChatWindow() {
+function ChatWindow({ isSidebarOpen, setIsSidebarOpen }) {
   const {
     prompt,
     setPrompt,
@@ -88,9 +88,14 @@ function ChatWindow() {
     <div className="ChatWindow">
       {/* navbar */}
       <div className="navbar">
-        <span>
-          BharatGPT <i className="fa-solid fa-angle-down"></i>{" "}
-        </span>
+        <div className="nav-left">
+          <div className="hamburger" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+            <i className="fa-solid fa-bars"></i>
+          </div>
+          <span>
+            BharatGPT <i className="fa-solid fa-angle-down"></i>{" "}
+          </span>
+        </div>
 
         <div className="userIconDIV">
           <span className="usericon">
